@@ -31,7 +31,6 @@ makeCacheMatrix <- function(x = matrix()) {
 # cacheSolve:  retrieves the inverse from the cache if the inverse has already been calculated (and the original matrix has not changed), 
 # If this is the correct inverse is not yet stored in cache it computes the inverse and stores it in the cache
 cacheSolve <- function(x, ...) {
-        x$set()
         m <- x$getinv()
         if(!is.null(m)) {
                 message("Wait a minute, I have it in cache")
